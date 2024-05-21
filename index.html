@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function () {
+            var titleText = "Pedro";
+            var titleIndex = 0;
+
+            function changeTitle() {
+                if (titleIndex < titleText.length) {
+                    document.title = titleText.substring(0, titleIndex + 1);
+                    titleIndex++;
+                } else {
+                    titleIndex = 0; // Bắt đầu lại từ đầu khi đã viết xong từ "Pedro"
+                }
+            }
+
+            setInterval(changeTitle, 270); // Thay đổi tiêu đề mỗi giây
+        };
+    </script>
+</head>
+
+<body>
+    <div>
+        <video id="pedro" autoplay loop>
+            <source src="Pedro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+
+</html>
